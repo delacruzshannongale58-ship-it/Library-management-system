@@ -9,31 +9,86 @@
 <body>
 
 <div class="container">
-    <h1>📚 Library Management System</h1>
 
-    <div class="form">
-        <input type="text" id="title" placeholder="Book Title">
-        <input type="text" id="author" placeholder="Author">
-        <button onclick="addBook()">Add Book</button>
-    </div>
+<h1>📚 Library Management System</h1>
 
-    <input type="text" id="search" placeholder="Search Book..." onkeyup="searchBook()">
+<div class="form">
 
-    <table>
-        <thead>
-            <tr>
-                <th>Book Title</th>
-                <th>Author</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+<input type="text" id="title" placeholder="Book Title">
+<input type="text" id="author" placeholder="Author">
+<button onclick="addBook()">Add Book</button>
 
-        <tbody id="bookList">
+</div>
 
-        </tbody>
-    </table>
+<div class="search">
+
+<input type="text" id="search" placeholder="Search Book..." onkeyup="searchBook()">
+
+</div>
+
+<h2>Library Books</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Book</th>
+<th>Author</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="bookTable"></tbody>
+
+</table>
+
+<h2>Borrow Book</h2>
+
+<div class="borrow">
+
+<select id="borrowBook"></select>
+
+<input type="text" id="borrower" placeholder="Borrower's Name">
+
+<input type="date" id="borrowDate">
+
+<input type="date" id="returnDate">
+
+<button onclick="borrowBook()">Borrow</button>
+
+</div>
+
+<h2>Borrowing Records</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Book</th>
+<th>Borrower</th>
+<th>Borrow Date</th>
+<th>Return Date</th>
+<th>Status</th>
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="recordTable"></tbody>
+
+</table>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
